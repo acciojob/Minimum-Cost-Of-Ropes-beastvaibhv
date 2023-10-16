@@ -10,7 +10,7 @@ function calculateMinCost() {
         return;
       }
 	const minimumCost = findMinCost(ropeLengths);
-      result.textContent =  `minimium cost of ropes '{$minimumCost}';
+      result.textContent =  `minimium cost of ropes ${minimumCost}`;
 	
 }
 function findMinCost(arr) {
