@@ -3,11 +3,8 @@ function calculateMinCost() {
 	const text = document.getElementById("rope-lengths");
 	const result = document.getElementById("result");
 	const ropeLengths = text.value.split(",").map(Number);
-	
-    
-      
-	const minimumCost = findMinCost(ropeLengths);
-      result.textContent =   minimumCost;
+    const minimumCost = findMinCost(ropeLengths);
+    result.textContent =   minimumCost;
 	
 }
 function findMinCost(arr) {
