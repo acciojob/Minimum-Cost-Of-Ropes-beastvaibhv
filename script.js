@@ -5,12 +5,9 @@ function calculateMinCost() {
 	const ropeLengths = text.value.split(",").map(Number);
 	
     
-      if (!ropeLengths.every(Number.isInteger) || ropeLengths.length < 2) {
-        result.textContent = "Invalid input. Please provide at least two integer rope lengths.";
-        return;
-      }
+      
 	const minimumCost = findMinCost(ropeLengths);
-      result.textContent =  `minimium cost of ropes ${minimumCost}`;
+      result.textContent =   minimumCost;
 	
 }
 function findMinCost(arr) {
