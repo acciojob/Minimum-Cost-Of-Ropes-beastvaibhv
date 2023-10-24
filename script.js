@@ -1,20 +1,16 @@
-
-	
-	
-
-myButton = document.getElementById("calculate").addEventListener("click", findMinCost);
+const myButton = document.getElementById("calculate");
+myButton.addEventListener("click", findMinCost);
 
 function findMinCost() {
-	const textElement = document.getElementById("rope-lengths");
-	const resultElement = document.getElementById("result");
-	const arr = textElement.value.split(",").map(Number);
+    const textElement = document.getElementById("rope-lengths");
+    const resultElement = document.getElementById("result");
     const ropeLengths = textElement.value.trim();
     if (!ropeLengths) {
         resultElement.textContent = "Please enter rope lengths.";
         return;
     }
 
-    
+    const arr = ropeLengths.split(",").map(Number);
 
     let minCost = 0;
     while (arr.length > 1) {
@@ -23,5 +19,5 @@ function findMinCost() {
         minCost += sum;
         arr.splice(0, 2, sum);
     }
-    resultElement.textContent = minCost;
+    resultElement.textContent = "Minimum cost: " + minCost;
 }
